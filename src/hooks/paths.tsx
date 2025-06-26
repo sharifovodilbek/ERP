@@ -2,6 +2,7 @@ import { TeamOutlined, UngroupOutlined, UnorderedListOutlined, UserOutlined } fr
 import { Groups, Major, Students, Teachers } from "../pages/Dashboard"
 import Home from "../pages/Dashboard/Home"
 import NotFound from "../pages/Dashboard/NotFound"
+import { NavLink } from "react-router-dom"
 
 export const paths = {
     home: "/",
@@ -49,24 +50,23 @@ export const DashboardRouteList = [
 
 export const DashboardNavList = [
     {
-        id: 1,
-        title: "Yo'nalishlar",
-        icon: <UnorderedListOutlined />
+        key:1,
+        label:<NavLink to={paths.major}>Yo'nalishlar</NavLink>,
+        icon:<UnorderedListOutlined />,
     },
     {
-        id: 2,
-        title: "Guruhlar",
-        icon: <UngroupOutlined />
+        key:2,
+        label:<NavLink to={paths.groups}>Guruxlar</NavLink>,
+        icon:<UngroupOutlined />
     },
     {
-        id: 3,
-        title: "O'quvchilar",
-        icon: <TeamOutlined />
+        key:3,
+        label:<NavLink to={paths.students}>O'quvchilar</NavLink>,
+        icon:<TeamOutlined />
     },
     {
-        id: 4,
-        title: "Ustozlar",
-        element: <UserOutlined />
+        key:4,
+        label:<NavLink to={paths.teachers}>Ustozlar</NavLink>,
+        icon:<UserOutlined />
     },
-
 ]

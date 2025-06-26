@@ -5,9 +5,7 @@ import type { DashboardRouteType } from "../types/DashboardRouteType"
 const DashboardRoute = () => {
   return (
     <Routes>
-      {DashboardRouteList.map((item: DashboardRouteType) => (
-        <Route path={item.path} element={item.element} />
-      ))}
+      {DashboardRouteList.map((item:DashboardRouteType) => <Route key={item.id} path={item.path} element={item.element}/>)}
     </Routes>
   )
 }

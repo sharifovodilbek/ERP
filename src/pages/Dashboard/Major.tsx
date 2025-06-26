@@ -1,6 +1,6 @@
 const Major = () => {
   return (
-    <div>Major h</div>
+    <div>Major</div>
   )
 }
 
