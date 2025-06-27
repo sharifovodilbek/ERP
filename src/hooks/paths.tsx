@@ -1,53 +1,64 @@
-import { TeamOutlined, UngroupOutlined, UnorderedListOutlined, UserOutlined } from "@ant-design/icons"
-import { Groups, Major, Students, Teachers } from "../pages/Dashboard"
-import Home from "../pages/Dashboard/Home"
-import NotFound from "../pages/Dashboard/NotFound"
-import { NavLink } from "react-router-dom"
+import { Groups, Home, Major,  Students, Teachers } from "../pages/Dashboard"
+import MajorCreate from "../pages/Dashboard/MajorCreate";
+import MajorMore from "../pages/Dashboard/MajorMore";
+import { TeamOutlined, UngroupOutlined, UnorderedListOutlined, UserOutlined } from '@ant-design/icons';
+import NotFound from "../pages/Dashboard/NotFound";
+import { NavLink } from "react-router-dom";
 
 export const paths = {
-    home: "/",
-    signIn: "/sign-in",
-    major: "/major",
-    groups: "/groups",
-    students: "/students",
-    teachers: "/teachers",
-    notFound: "*"
+    home:"/",
+    signIn:"/sign-in",
+    major:"/major",
+    majorCrud:"/major/create",
+    majorMore:"/major/:id",
+    groups:"/groups",
+    students:"/students",
+    teachers:"/teachers",
+    notFound:"*"
 }
 
 export const DashboardRouteList = [
     {
-        id: 1,
-        path: paths.home,
-        element: <Home />
+        id:1,
+        path:paths.home,
+        element:<Home/>
     },
     {
-        id: 2,
-        path: paths.major,
-        element: <Major />
+        id:2,
+        path:paths.major,
+        element:<Major/>
     },
     {
-        id: 3,
-        path: paths.groups,
-        element: <Groups />
+        id:3,
+        path:paths.groups,
+        element:<Groups/>
     },
     {
-        id: 4,
-        path: paths.students,
-        element: <Students />
+        id:4,
+        path:paths.students,
+        element:<Students/>
     },
     {
-        id: 5,
-        path: paths.teachers,
-        element: <Teachers />
+        id:5,
+        path:paths.teachers,
+        element:<Teachers/>
     },
     {
-        id: 6,
-        path: paths.notFound,
-        element: <NotFound />
+        id:6,
+        path:paths.notFound,
+        element:<NotFound/>
     },
-
+    {
+        id:7,
+        path:paths.majorCrud,
+        element:<MajorCreate/>
+    },
+    {
+        id:8,
+        path:paths.majorMore,
+        element:<MajorMore/>
+    },
 ]
-
 export const DashboardNavList = [
     {
         key:1,
